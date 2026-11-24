@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <!-- YOUR PORTFOLIO CONTENT -->
+    <main>
+
+        <section class="projects-section">
+            <h1>My Projects</h1>
+
+            <!-- PROJECT CARD -->
+            <div class="project-card"
+                data-title="Personal Portfolio Website"
+                data-description="A responsive personal portfolio showcasing my web development skills, projects, and professional experience."
+                data-technologies="HTML, CSS, JavaScript, Bootstrap"
+                data-image="./images/portfolio.png"
+                data-link="https://github.com/elopcional/myportfolio">
+
+                <img src="./images/portfolio.png" alt="Portfolio project">
+
+                <h3>Personal Portfolio Website</h3>
+
+                <p>Explore my personal portfolio project.</p>
+
+                <button type="button" class="view-project-btn">
+                    View Details
+                </button>
+            </div>
+        </section>
+
+        <!-- Add your other portfolio sections here -->
+
+    </main>
+
+
+    <!-- 1. WELCOME POPUP -->
+    <div class="popup-overlay" id="welcomePopup">
+        <div class="popup-box welcome-box">
+
+            <button class="popup-close" data-close="welcomePopup">&times;</button>
+
+            <div class="popup-icon">👋</div>
+
+            <h2>Welcome to My Portfolio!</h2>
+
+            <p>
+                Hello! I'm Raul, a passionate web developer.
+                Thank you for visiting my portfolio.
+                Feel free to explore my projects and discover what I can create.
+            </p>
+
+            <button class="popup-primary-btn" data-close="welcomePopup">
+                Explore My Work
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- 2. PROJECT DETAILS POPUP -->
+    <div class="popup-overlay" id="projectPopup">
+        <div class="popup-box project-box">
+
+            <button class="popup-close" data-close="projectPopup">&times;</button>
+
+            <img id="projectImage" src="" alt="Project preview">
+
+            <div class="project-popup-content">
+
+                <h2 id="projectTitle">Project Title</h2>
+
+                <p id="projectDescription"></p>
+
+                <p>
+                    <strong>Technologies:</strong>
+                    <span id="projectTechnologies"></span>
+                </p>
+
+                <a id="projectLink"
+                   href="#"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="popup-primary-btn project-link">
+                    View Project
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 3. CONTACT POPUP -->
+    <div class="popup-overlay" id="contactPopup">
+        <div class="popup-box contact-box">
+
+            <button class="popup-close" data-close="contactPopup">&times;</button>
+
+            <div class="popup-icon">💼</div>
+
+            <h2>Let's Work Together!</h2>
+
+            <p>
+                Have a project in mind? I'd love to hear about it.
+                Send me a message and let's discuss how we can work together.
+            </p>
+
+            <form id="contactPopupForm">
+
+                <div class="form-group">
+                    <label for="visitorName">Your Name</label>
+                    <input type="text" id="visitorName" name="name"
+                           placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="visitorEmail">Your Email</label>
+                    <input type="email" id="visitorEmail" name="email"
+                           placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="visitorMessage">Your Message</label>
+                    <textarea id="visitorMessage" name="message" rows="4"
+                              placeholder="Tell me about your project..."
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="popup-primary-btn">
+                    Send Message
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+
+    <script src="popups.js"></script>
+
+</body>
+</html>

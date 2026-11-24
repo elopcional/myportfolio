@@ -1,0 +1,177 @@
+/* Popup background overlay */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Show popup */
+.popup-overlay.active {
+    display: flex;
+}
+
+/* Popup box */
+.popup-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    background: #fff;
+    color: #333;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    animation: popupAppear 0.3s ease;
+}
+
+/* Popup animation */
+@keyframes popupAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Close button */
+.popup-close {
+    position: absolute;
+    top: 12px;
+    right: 17px;
+
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Icon */
+.popup-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+/* Headings */
+.popup-box h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #49383b;
+}
+
+/* Paragraphs */
+.popup-box p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Main button */
+.popup-primary-btn {
+    display: inline-block;
+    border: none;
+    background: #d98f9e;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.popup-primary-btn:hover {
+    background: #b96f80;
+    transform: translateY(-2px);
+}
+
+/* Project popup image */
+.project-box > img {
+    width: 100%;
+    max-height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Project content */
+.project-popup-content {
+    text-align: left;
+}
+
+/* Contact form */
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #d98f9e;
+}
+
+/* Project card */
+.project-card {
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 12px;
+    background: white;
+    color: #333;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.project-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #d98f9e;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .popup-box {
+        padding: 30px 20px;
+    }
+}
